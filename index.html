@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Element</title>
+
+</head>
+
+<body>
+    <p></p>
+
+    <script type="text/javascript">
+        let e = function (element1, element2) {
+            let p = document.querySelector('p');
+            let div = document.createElement(element1);
+            div.innerHTML = element2;
+            document.querySelector('p').appendChild(div);
+        };
+        e("h1", "hi");
+        e("h2", "world");
+    </script>
+
+
+</body>
+
+</html>

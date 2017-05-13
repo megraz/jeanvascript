@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Object</title>
+</head>
+
+<body>
+    <script>
+        let personne = {
+            nom: 'mon nom',
+            prenom: 'mon prenom',
+            age: 20,
+            adresse: {
+                number: 204,
+                rue: "park avenue",
+                ville: 'New York',
+            },
+            celibataire: true,
+            chien: [
+                'spot',
+                'rex',
+                'zeus'
+            ],
+            salutation: function() {
+                alert('coucou tlm');
+            }
+
+        };
+        personne.salutation();
+        personne.adresse.number = 4; //pour changer le number dans adresse donc 4 au lieu de 204//
+        console.log(personne.adresse.number);
+        // /*on peut rajouter 
+        // region : 'rhône alpes',
+        // pays: 'France',*/
+        // //ou  console.log(personne['region']); //
+    </script>
+
+
+</body>
+
+</html>
