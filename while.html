@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>while</title>
+</head>
+
+<body>
+
+
+    <script type="text/javascript">
+        let reponse = prompt('2+2 = ?');
+        // ou let reponse = 4;//
+        while (reponse !== '4') {
+
+            //ou while (prompt("combien font 2 + 2 ?") != reponse); {//
+            let p = document.createElement('p');
+            p.textContent = 'Faux, ça n\'est pas' + reponse;
+            document.body.appendChild(p);
+            reponse = prompt('Non, 2+2 = ?');
+        }
+        let p = document.createElement('p');
+        p.textContent = 'Bravo, c\'est bien 4';
+        document.body.appendChild(p);
+        /* déclarer la valeur voulue en premier
+        on peut mettre le prompt directement dans le while pr indiquer la question
+        != veux dire tant que c'est different */
+
+        /* ou en premier let reponse = prompt (' 2 + 2 = ?') ;
+        while( reponse !== '4') {
+            alerte(reponse);
+            reponse = prompt ('Non , 2+2 = ?')}
+            alert ('bravo c\'est bien 4'); */
+    </script>
+
+</body>
+
+</html>

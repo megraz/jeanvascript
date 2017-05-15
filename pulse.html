@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pulse</title>
+    <style>
+        @keyframes toRed {
+            to {
+                background-color: red;
+            }
+        }
+        
+        @keyframes toGreen {
+            to {
+                background-color: green;
+            }
+        }
+        
+        .pulseRed {
+            animation-name: toRed;
+            animation-duration: 0.2s;
+            animation-iteration-count: 1;
+        }
+        
+        .pulseGreen {
+            animation-name: toGreen;
+            animation-duration: 0.2s;
+            animation-iteration-count: 1;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <button id="btn">click</button>
+    <input type="texte" id="input">
+
+    <script type="text/javascript">
+        //on capture le bouton
+        let btn = document.querySelector("#btn");
+        let classes = btn.className;
+
+        btn.addEventListener('animationend', function() {
+            btn.className = classes;
+        });
+
+        //btn.style.animation = 'toRed 0.1s';
+        btn.addEventListener('click', function() {
+            //je capture mon input
+            let input = document.querySelector('#input');
+            if (input.value === '') {
+                btn.classList.add('pulseRed');
+            } else {
+                btn.classList.add('pulseGreen');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
