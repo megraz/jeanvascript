@@ -34,6 +34,15 @@
                 if (objet.hasOwnProperty(input.value)) {
                     // si oui, on rajoute la nouvelle valeur à la suite
                     objet[inputClef.value] += ',' + inputValeur.value;
+                    let clef = inputClef.value;
+                    // pour faire sous forme de tableau 
+                    //if (typeof(objet[clef])) === 'Array') { ou
+                    if (Array.isArray(object[clef])) {
+                        // si oui, on push directement la nouvelle valeur dedans
+                        objet[clef].push(inputValeur.value);
+                    } else {
+                        object[clef] = [objet[clef], inputValeur.value];
+                    }
                 } else {
                     // si non, on crée la propriété
                     objet[inputClef.value] = inputValeur.value;
