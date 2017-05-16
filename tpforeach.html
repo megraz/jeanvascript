@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="clef">clef: </label>
+    <input type="texte" id="clef">
+    <label for="valeur">valeur: </label>
+    <input type="texte" id="valeur">
+    <button id="btn">Ajouter</button>
+
+
+    <script type="text/javascript">
+        // on crée l'objet
+        let objet = {};
+
+        // on ajoute un event au click sur le bouton
+        document.querySelector('#btn')
+            .addEventListener('click', function() {
+                let inputClef = document.querySelector('#clef');
+                let inputValeur = document.querySelector('#valeur');
+                // on ajoute/remplace une propriété en prenant les valeurs de nos deux input 
+                //comme clef/valeur
+
+                /* utiliser hasOwnProperty pour déterminer si l'objet possède déjà
+                une propiété ayant la même clef que celle contenue dans l'inpuClef
+                */
+                if (objet.hasOwnProperty(input.value)) {
+                    // si oui, on rajoute la nouvelle valeur à la suite
+                    objet[inputClef.value] += ',' + inputValeur.value;
+                } else {
+                    // si non, on crée la propriété
+                    objet[inputClef.value] = inputValeur.value;
+                }
+                console.log(object);
+            });
+
+
+
+
+
+        // mon tp  - correction plus haut dans le html 
+        /* <input type="texte" id="input">
+            <input type="texte" id="ipt">
+            <button id="btn">Ajouter</button> */
+        /* let input = {
+
+                }
+                button.addEventListener('click', function() {
+                    let input = document.querySelector("#input").value;
+                    let input = document.querySelector("ipt").value;
+                    console.log(input);
+                });
+        */
+    </script>
+</body>
+
+</html>
