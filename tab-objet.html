@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tableau d'objets</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        let tables = [{
+            numero: 1,
+            place: 5,
+            apprenants: [{
+                nom: 'nom1',
+                prenom: 'prenom1'
+            }, {
+                nom: 'nom2',
+                prenom: 'prenom2'
+            }, {
+                nom: 'nom3',
+                prenom: 'prenom3'
+            }, ]
+        }, {
+            numero: 2,
+            place: 6,
+            apprenants: [{
+                nom: 'nom4',
+                prenom: 'prenom4'
+            }, {
+                nom: 'nom5',
+                prenom: 'prenom5'
+            }, {
+                nom: 'nom6',
+                prenom: 'prenom6'
+            }, ]
+
+        }, {
+            numero: 3,
+            place: 4,
+            apprenants: [{
+                nom: 'nom7',
+                prenom: 'prenom7'
+            }, {
+                nom: 'nom8',
+                prenom: 'prenom8'
+            }, {
+                nom: 'nom9',
+                prenom: 'prenom9'
+            }, ]
+        }, {
+            numero: 4,
+            place: 5,
+            apprenants: [{
+                nom: 'nom10',
+                prenom: 'prenom10'
+            }, {
+                nom: 'nom11',
+                prenom: 'prenom11'
+            }, {
+                nom: 'nom12',
+                prenom: 'prenom12'
+            }]
+        }];
+        console.log(tables[2]);
+        for (let table of tables) {
+            console.log("La table n° " + table.numero + 'comporte' +
+                table.place + 'places, les apprenants' + 's\'appellent :');
+            for (let apprenant of table.apprenants) {
+                console.log(apprenant.nom);
+            }
+        }
+    </script>
+</body>
+
+</html>
