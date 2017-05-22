@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>This button</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <button>green</button>
+    <button>red</button>
+    <button>blue</button>
+
+
+
+
+
+
+    <script type="text/javascript">
+        document.querySelectorAll('button').forEach(function(btn) {
+            btn.addEventListener('click', changeColor);
+        });
+
+        function changeColor() {
+            /*this.style.backgroundColor = 'black'; ts les bts = noir au clic*
+            Faire en sorte que ces trois boutons aient la même fonction assigné à l'event click qui modifiera leur background-color en noir*/
+            this.style.backgroundColor = this.textContent;
+            /* les btn prennent la couleur de ce qui est ecrit dans le bouton
+            Faire que la background-color soit égale au texte du bouton sur lequel on vient de cliquer*/
+        }
+    </script>
+
+</body>
+
+</html>
